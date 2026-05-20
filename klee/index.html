@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klee — UI/UX Case Study · Shivam Kumar</title>
+  <meta name="description" content="Klee: Banking-App für Werkstudent:innen. UI/UX Case Study von Shivam Kumar." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      background: #0a0a0a;
+      color: #fafafa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid #222;
+      background: #0a0a0a;
+    }
+    .back {
+      color: #fafafa;
+      text-decoration: none;
+      font-size: 0.9rem;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .back:hover { opacity: 1; }
+    .title-block { text-align: center; flex: 1; min-width: 0; }
+    .title-block h1 { font-size: 1rem; font-weight: 600; }
+    .title-block p { font-size: 0.8rem; opacity: 0.6; margin-top: 0.15rem; }
+    .download {
+      background: #fafafa;
+      color: #0a0a0a;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .download:hover { opacity: 0.85; }
+    .viewer {
+      flex: 1;
+      width: 100%;
+      border: none;
+      background: #1a1a1a;
+      min-height: 80vh;
+    }
+    .mobile-fallback { display: none; padding: 3rem 1.5rem; text-align: center; }
+    .mobile-fallback h2 { margin-bottom: 0.5rem; }
+    .mobile-fallback p { opacity: 0.7; margin-bottom: 1.5rem; }
+    @media (max-width: 768px) {
+      .viewer { display: none; }
+      .mobile-fallback { display: block; }
+      .title-block h1 { font-size: 0.9rem; }
+      .title-block p { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="back">← Zurück</a>
+    <div class="title-block">
+      <h1>Klee — UI/UX Case Study</h1>
+      <p>Banking-App für Werkstudent:innen · Jan 2026</p>
+    </div>
+    <a href="/klee-case-study.pdf" download class="download">PDF ↓</a>
+  </header>
+
+  <iframe class="viewer" src="/klee-case-study.pdf" title="Klee Case Study PDF"></iframe>
+
+  <div class="mobile-fallback">
+    <h2>📄 Klee Case Study</h2>
+    <p>Für die beste Erfahrung öffne das PDF direkt:</p>
+    <a href="/klee-case-study.pdf" class="download">PDF öffnen</a>
+  </div>
+</body>
+</html>
